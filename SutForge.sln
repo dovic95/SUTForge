@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SutForge", "src\SutForge\SutForge.csproj", "{89FD47F0-EC29-4DDE-AF20-239C5E6DA174}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SutForge.Tests", "test\SutForge.Tests\SutForge.Tests.csproj", "{1F6C7AA4-AE6F-42E7-8DBA-E348F6EA8E5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89FD47F0-EC29-4DDE-AF20-239C5E6DA174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FD47F0-EC29-4DDE-AF20-239C5E6DA174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FD47F0-EC29-4DDE-AF20-239C5E6DA174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FD47F0-EC29-4DDE-AF20-239C5E6DA174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F6C7AA4-AE6F-42E7-8DBA-E348F6EA8E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F6C7AA4-AE6F-42E7-8DBA-E348F6EA8E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F6C7AA4-AE6F-42E7-8DBA-E348F6EA8E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F6C7AA4-AE6F-42E7-8DBA-E348F6EA8E5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
