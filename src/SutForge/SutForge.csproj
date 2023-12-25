@@ -5,6 +5,14 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Sutb</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>SUT Forge</Title>
+        <Authors>dovic95</Authors>
+        <Description>Simplifying .NET unit testing and Test-Driven Development with an intuitive builder pattern, classical approach, and high extensibility for effortless creation and customization of System Under Test instances.</Description>
+        <PackageProjectUrl>https://github.com/dovic95/SUTForge</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/dovic95/SUTForge/blob/main/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/dovic95/SUTForge</RepositoryUrl>
+        <PackageTags>dotnet tdd tests chicago classical</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
