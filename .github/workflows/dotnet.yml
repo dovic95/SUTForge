@@ -43,7 +43,7 @@ jobs:
       - name: Build and publish
         run: |
           ls
-          cd src/SUTForge
+          cd ./src/SUTForge
           VERSION=$(echo ${GITHUB_REF#refs/tags/})
           dotnet pack --configuration Release --output . --version-suffix $VERSION
           dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
