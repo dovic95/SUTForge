@@ -14,6 +14,7 @@
         <RepositoryUrl>https://github.com/dovic95/SUTForge</RepositoryUrl>
         <PackageTags>dotnet tdd tests chicago classical</PackageTags>
         <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <!-- Disable nullability warnings on older frameworks because there is no nullability info for BCL -->
@@ -25,6 +26,10 @@
         <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
         <PackageReference Include="PolyShim" Version="1.8.0" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
 </Project>
