@@ -1,22 +1,31 @@
 # SUT Forge
 
+<p align="center">
+    <img src="favicon.png" alt="Icon" />
+</p>
+
+Simplifying .NET unit testing and Test-Driven Development with an intuitive builder pattern, classical approach, and high extensibility for effortless creation and customization of System Under Test instances.
+
 ## Introduction
 
-Experience unit testing and Test-Driven Development (TDD) in a whole new light with `SUTForge`, a simple yet powerful .NET package meticulously designed to streamline the creation of System Under Test (SUT) instances. `SUTForge` follows the Chicago School to unit testing (also referred to as the Classical School of unit testing), offering a clean and efficient alternative to the over-mocking issues associated with the London approach. What sets `SUTForge` apart is its high degree of extensibility, allowing developers to craft personalized extension methods and tailor SUTs to their specific testing needs.
+Experience unit testing and Test-Driven Development (TDD) in a whole new light with `SUTForge`, a simple yet powerful .NET package meticulously designed to streamline the creation of System Under Test (SUT) instances. 
 
+`SUTForge` follows the Chicago School to unit testing (also referred to as the Classical School of unit testing), offering a clean and efficient alternative to the over-mocking issues associated with the London approach. 
+
+What sets `SUTForge` apart is its high degree of extensibility, allowing developers to craft personalized extension methods and tailor SUTs to their specific testing needs.
 
 
 **Key Features**:
 
 - **Effortless TDD Integration**: `SUTForge` seamlessly integrates with Test-Driven Development (TDD), enabling developers to write tests first and then effortlessly construct and configure their SUTs using the intuitive builder pattern provided by `SUTForge`.
 
-- **Classical Approach to Unit Testing**: Embrace the classical approach to unit testing, emphasizing simplicity and readability. `SUTForge` encourages clean and maintainable tests without succumbing to over-mocking pitfalls, ensuring your unit tests remain valuable assets throughout the development lifecycle.
+- **Chicago School of Unit Testing**: Embrace the Chicago approach of unit testing, emphasizing simplicity and readability. `SUTForge` encourages clean and maintainable tests without succumbing to over-mocking pitfalls, ensuring your unit tests remain valuable assets throughout the development lifecycle.
 
 - **Intuitive Builder Pattern**: Constructing SUTs becomes a breeze with `SUTForge`'s intuitive builder pattern. Say goodbye to the complexities of manual setup and embrace a syntax that makes unit test code concise, expressive, and easy to understand.
 
 - **Highly Extensible**: `SUTForge` goes beyond the basics, offering developers a high degree of extensibility. Write your own extension methods to customize SUTs according to your unique testing requirements. Tailor `SUTForge` to fit seamlessly into your specific development workflow.
 
-💪 Elevate your unit testing and TDD experience with `SUTForge`—a library that not only embraces the classical approach but also empowers you to extend and customize your testing capabilities. Your journey to efficient and maintainable tests starts here!
+💪 Elevate your unit testing and TDD experience with `SUTForge`—a library that not only embraces the Chicago approach but also empowers you to extend and customize your testing capabilities. Your journey to efficient and maintainable tests starts here!
 
 ## Getting Started
 
@@ -56,6 +65,24 @@ In the above test, we're using the `SutBuilder.Create` method to create a new in
 
 `SUTForge` also allows you to resolve configurations for services. Here's an example:
 
+Considering the following class that make use of `IConfiguration`:
+
+```csharp
+class ClassWithConfiguration
+{   
+    private readonly IConfiguration _configuration;
+
+    public ClassWithConfiguration(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
+    // ...
+}
+```
+
+In this test, we're adding a service of type `ClassWithConfiguration` that requires configuration:
+
 ```csharp
 [Test]
 public async Task Configuration_is_resolved_for_services()
@@ -71,7 +98,7 @@ public async Task Configuration_is_resolved_for_services()
 }
 ```
 
-In this test, we're adding a service of type `ClassWithConfiguration` that requires configuration. After building the SUT, we assert that the service of type `ClassWithConfiguration` is not null, implying that the configuration was resolved correctly.
+ After building the SUT, we assert that the service of type `ClassWithConfiguration` is not null, implying that the configuration was resolved correctly.
 
 ### Customizing Configuration
 
@@ -102,7 +129,7 @@ In this test, we're customizing the configuration by adding an in-memory collect
 
 ### Extending SUTForge
 
-`SUTForge` is highly extensible, allowing you to write your own extension methods to customize SUTs according to your unique testing requirements. Here's an example:
+`SUTForge` is highly extensible, allowing you to use existing extension methods on `IServiceCollection` or to write your own extension methods to customize SUTs according to your unique testing requirements. Here's an example:
 
 ```csharp   
 
@@ -115,8 +142,7 @@ public static class SutBuilderExtensions
 }   
 ```
 
-
-In this example, we're writing an extension method that allows us to customize the SUT by adding a singleton service of type `ITimeProvider` with an implementation of `DeterministicTimeProvider`. This extension method can then be used in our tests as follows:
+In this example, we're writing an extension method that allows us to customize the SUT by adding a singleton service of type `ITimeProvider` with an implementation of `DeterministicTimeProvider` to control the time of the SUT. This extension method can then be used in our tests as follows:
 
 ```csharp   
 [Test]
@@ -126,7 +152,7 @@ public async Task SUT_can_be_customized()
     var time = 14.January(2021).At(12, 0, 0).AsUtc(); // Using FluentAssertions
     
     var sut = await SutBuilder.Create
-        .AddApplicationServices() // Add the application services
+        .AddMyApplicationServices() // 💡 Add the application services (the same method you'll use in your Startup class)
         .WithCurrentTime(time)
         .BuildAsync();
     
@@ -140,7 +166,7 @@ public async Task SUT_can_be_customized()
 }
 ```
 
-With `SUTForge`, writing unit tests becomes a breeze. Embrace the classical approach to unit testing and elevate your TDD experience with `SUTForge`. Happy testing!
+With `SUTForge`, writing unit tests becomes a breeze. Embrace the Chicago approach of unit testing and elevate your TDD experience with `SUTForge`. Happy testing!
 
 ## References
 
