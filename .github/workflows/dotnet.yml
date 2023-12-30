@@ -13,10 +13,6 @@ on:
     types:
       - published    # Run the workflow when a new GitHub release is published
 
-defaults:
-  run:
-    shell: pwsh
-
 jobs:
   build:
 
@@ -57,6 +53,7 @@ jobs:
 
       - name: Publish NuGet package
         run: |
-          foreach($package in (Get-ChildItem . -Recurse -Include SUTForge.*.nupkg)) {
-              dotnet nuget push $package.FullName --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
-          }
+          find . -name "SUTForge*.nupkg" -print0 | while IFS= read -r -d '' package
+          do
+            dotnet nuget push "$package" --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          done
