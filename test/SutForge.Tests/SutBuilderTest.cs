@@ -105,7 +105,6 @@ public class SutBuilderTest
     }
 
     #region Simple class
-
     interface ISomeInterface
     {
     }
