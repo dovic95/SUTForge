@@ -1,5 +1,8 @@
 # SUT Forge
 
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/SUTForge)](https://www.nuget.org/packages/SutForge)
+
+
 <p align="center">
     <img src="favicon.png" alt="Icon" />
 </p>
@@ -33,10 +36,10 @@ To get started with `SUTForge`, you need to install the package in your .NET pro
 
 ### Installation
 
-Install `SUTForge` via NuGet package manager:
+Install `SUTForge` via .NET CLI:
 
 ```shell
-Install-Package SUTForge
+dotnet add package SUTForge
 ```
 
 ### Writing Your First Test
