@@ -16,7 +16,7 @@ on:
 defaults:
   run:
     shell: pwsh
-    
+
 jobs:
   build:
 
@@ -57,6 +57,6 @@ jobs:
 
       - name: Publish NuGet package
         run: |
-          foreach($file in (Get-ChildItem . -Recurse -Include *.nupkg)) {
-              dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          foreach($package in (Get-ChildItem . -Recurse -Include SUTForge.*.nupkg)) {
+              dotnet nuget push $package.FullName --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
           }
