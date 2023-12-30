@@ -43,9 +43,10 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore
-        
+
       - name: Pack and publish
         run: |
           VERSION=$(echo ${GITHUB_REF#refs/tags/})
-          dotnet pack src/SUTForge/SUTForge.csproj --configuration Release --output . --version-suffix $VERSION
+          dotnet build --no-restore -c Release -p:Version=$VERSION
+          dotnet pack src/SUTForge/SUTForge.csproj --configuration Release --output . -p:Version=$VERSION
           dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
