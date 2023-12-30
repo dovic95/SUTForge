@@ -116,7 +116,6 @@ public class SutBuilderTest
     #endregion
     
     #region Class with dependencies
-
     class ClassWithConfiguration
     {   
         private readonly IConfiguration _configuration;
