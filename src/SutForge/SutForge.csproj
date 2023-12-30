@@ -8,13 +8,14 @@
         <Title>SUT Forge</Title>
         <Authors>dovic95</Authors>
         <PackageTags>TDD unit-testing chicago classical SUT testing</PackageTags>
-        <Description>Simplifying .NET unit testing and Test-Driven Development with an intuitive builder pattern, classical approach, and high extensibility for effortless creation and customization of System Under Test instances.</Description>
+        <Description>Simplifying .NET unit testing and Test-Driven Development with an intuitive builder pattern, classical/Chicago approach, and high extensibility for effortless creation and customization of System Under Test instances.</Description>
         <PackageProjectUrl>https://github.com/dovic95/SUTForge</PackageProjectUrl>
         <PackageLicense>https://github.com/dovic95/SUTForge/blob/main/LICENSE</PackageLicense>
         <RepositoryUrl>https://github.com/dovic95/SUTForge</RepositoryUrl>
-        <PackageTags>dotnet tdd tests chicago classical</PackageTags>
+        <PackageTags>dotnet tdd tests chicago classical sut</PackageTags>
         <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>favicon.png</PackageIcon>
     </PropertyGroup>
 
     <!-- Disable nullability warnings on older frameworks because there is no nullability info for BCL -->

@@ -38,9 +38,7 @@ To get started with `SUTForge`, you need to install the package in your .NET pro
 
 Install `SUTForge` via .NET CLI:
 
-```shell
-dotnet add package SUTForge
-```
+- 📦 [NuGet](https://nuget.org/packages/SUTForge): `dotnet add package SUTForge`
 
 ### Writing Your First Test
 
