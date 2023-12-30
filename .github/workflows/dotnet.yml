@@ -40,10 +40,12 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
-      - name: Build and publish
+
+      - name: Restore dependencies
+        run: dotnet restore
+        
+      - name: Pack and publish
         run: |
-          ls
-          cd ./src/SUTForge
           VERSION=$(echo ${GITHUB_REF#refs/tags/})
-          dotnet pack --configuration Release --output . --version-suffix $VERSION
+          dotnet pack src/SUTForge/SUTForge.csproj --configuration Release --output . --version-suffix $VERSION
           dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
