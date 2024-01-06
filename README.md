@@ -11,27 +11,29 @@ Simplifying ASP.NET Core unit testing and Test-Driven Development with an intuit
 
 ## Introduction
 
-Experience unit testing and Test-Driven Development (TDD) in a whole new light with `SUTForge`, a simple yet powerful .NET package meticulously designed to streamline the creation of System Under Test (SUT) instances. 
+**SUTForge: Empowering Unit Testing and TDD with Seamless IServiceCollection Extension**
 
-`SUTForge` follows the [Detroit School to unit testing](https://zone84.tech/architecture/london-and-detroit-schools-of-unit-tests/) (also referred to as the Classical or Chicago School of unit testing), offering a clean and efficient alternative to the over-mocking issues associated with the London approach. 
+Revolutionize your approach to unit testing and Test-Driven Development (TDD) with `SUTForge`, a robust .NET package meticulously crafted to simplify the creation of System Under Test (SUT) instances.
 
-What sets `SUTForge` apart is its high degree of extensibility, allowing developers to craft personalized extension methods and tailor SUTs to their specific testing needs.
+Following the [Detroit School of Unit Testing](https://zone84.tech/architecture/london-and-detroit-schools-of-unit-tests/) (Classical or Chicago School of unit testing), `SUTForge` provides a refreshing alternative to the over-mocking challenges associated with the London approach.
 
-**Key Features**:
+One standout feature of `SUTForge` is its extensive extensibility. Developers can seamlessly integrate their existing extension methods on `IServiceCollection` within the `ConfigureServices` method in the `Startup` class. This capability ensures a unified composition root for both production code and unit tests.
 
-- **Effortless TDD Integration**: `SUTForge` seamlessly integrates with Test-Driven Development (TDD), enabling developers to write tests first and then effortlessly construct and configure their SUTs using the intuitive builder pattern provided by `SUTForge`.
+**Key Features:**
 
-- **Detroit School of Unit Testing**: Embrace the [Detroit approach of unit testing](https://zone84.tech/architecture/london-and-detroit-schools-of-unit-tests/), emphasizing simplicity and readability. `SUTForge` encourages clean and maintainable tests without succumbing to over-mocking pitfalls, ensuring your unit tests remain valuable assets throughout the development lifecycle.
+- **Effortless TDD Integration:** Seamlessly integrate `SUTForge` into your Test-Driven Development (TDD) workflow. Write tests first and effortlessly construct and configure SUTs using the intuitive builder pattern provided by `SUTForge`.
 
-- **Intuitive Builder Pattern**: Constructing SUTs becomes a breeze with `SUTForge`'s intuitive builder pattern. Say goodbye to the complexities of manual setup and embrace a syntax that makes unit test code concise, expressive, and easy to understand.
+- **Detroit School of Unit Testing:** Embrace the simplicity and readability of the [Detroit approach](https://zone84.tech/architecture/london-and-detroit-schools-of-unit-tests/). `SUTForge` facilitates clean and maintainable tests without falling into over-mocking pitfalls, ensuring the enduring value of your unit tests throughout the development lifecycle.
 
-- **Highly Extensible**: `SUTForge` goes beyond the basics, offering developers a high degree of extensibility. Write your own extension methods to customize SUTs according to your unique testing requirements. Tailor `SUTForge` to fit seamlessly into your specific development workflow.
+- **Intuitive Builder Pattern:** Say goodbye to the complexities of manual setup. `SUTForge` simplifies SUT construction with an intuitive builder pattern, offering a syntax that makes unit test code concise, expressive, and easy to understand.
 
-💪 Elevate your unit testing and TDD experience with `SUTForge`—a library that not only embraces the Detroit approach but also empowers you to extend and customize your testing capabilities. Your journey to efficient and maintainable tests starts here!
+- **Highly Extensible:** Beyond the basics, `SUTForge` excels in extensibility. Craft your extension methods to customize SUTs, aligning them with your unique testing requirements. Tailor `SUTForge` to seamlessly integrate into your specific development workflow.
+
+💪 Elevate your unit testing and TDD experience with `SUTForge`—a library that not only champions the Detroit approach but also empowers you to effortlessly plug your existing extension methods onto `IServiceCollection`, ensuring a harmonized composition root for both production and test environments. Your journey to efficient and maintainable tests begins here!
 
 ## Getting Started
 
-To get started with `SUTForge`, you need to install the package in your .NET project. Once installed, you can start writing your unit tests using the `SUTForge`'s intuitive builder pattern.
+To get started with `SUTForge`, you need to install the package in your ASP.NET project. Once installed, you can start writing your unit tests using the `SUTForge`'s intuitive builder pattern.
 
 ### Installation
 
