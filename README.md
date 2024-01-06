@@ -7,28 +7,27 @@
     <img src="favicon.png" alt="Icon" />
 </p>
 
-Simplifying ASP.NET Core unit testing and Test-Driven Development with an intuitive builder pattern, classical approach, and high extensibility for effortless creation and customization of System Under Test instances.
+Simplifying ASP.NET Core unit testing and Test-Driven Development with an intuitive builder pattern, [classical/Detroit](https://zone84.tech/architecture/london-and-detroit-schools-of-unit-tests/) approach, and high extensibility for effortless creation and customization of System Under Test instances.
 
 ## Introduction
 
 Experience unit testing and Test-Driven Development (TDD) in a whole new light with `SUTForge`, a simple yet powerful .NET package meticulously designed to streamline the creation of System Under Test (SUT) instances. 
 
-`SUTForge` follows the Chicago School to unit testing (also referred to as the Classical School of unit testing), offering a clean and efficient alternative to the over-mocking issues associated with the London approach. 
+`SUTForge` follows the [Detroit School to unit testing](https://zone84.tech/architecture/london-and-detroit-schools-of-unit-tests/) (also referred to as the Classical or Chicago School of unit testing), offering a clean and efficient alternative to the over-mocking issues associated with the London approach. 
 
 What sets `SUTForge` apart is its high degree of extensibility, allowing developers to craft personalized extension methods and tailor SUTs to their specific testing needs.
-
 
 **Key Features**:
 
 - **Effortless TDD Integration**: `SUTForge` seamlessly integrates with Test-Driven Development (TDD), enabling developers to write tests first and then effortlessly construct and configure their SUTs using the intuitive builder pattern provided by `SUTForge`.
 
-- **Chicago School of Unit Testing**: Embrace the Chicago approach of unit testing, emphasizing simplicity and readability. `SUTForge` encourages clean and maintainable tests without succumbing to over-mocking pitfalls, ensuring your unit tests remain valuable assets throughout the development lifecycle.
+- **Detroit School of Unit Testing**: Embrace the [Detroit approach of unit testing](https://zone84.tech/architecture/london-and-detroit-schools-of-unit-tests/), emphasizing simplicity and readability. `SUTForge` encourages clean and maintainable tests without succumbing to over-mocking pitfalls, ensuring your unit tests remain valuable assets throughout the development lifecycle.
 
 - **Intuitive Builder Pattern**: Constructing SUTs becomes a breeze with `SUTForge`'s intuitive builder pattern. Say goodbye to the complexities of manual setup and embrace a syntax that makes unit test code concise, expressive, and easy to understand.
 
 - **Highly Extensible**: `SUTForge` goes beyond the basics, offering developers a high degree of extensibility. Write your own extension methods to customize SUTs according to your unique testing requirements. Tailor `SUTForge` to fit seamlessly into your specific development workflow.
 
-💪 Elevate your unit testing and TDD experience with `SUTForge`—a library that not only embraces the Chicago approach but also empowers you to extend and customize your testing capabilities. Your journey to efficient and maintainable tests starts here!
+💪 Elevate your unit testing and TDD experience with `SUTForge`—a library that not only embraces the Detroit approach but also empowers you to extend and customize your testing capabilities. Your journey to efficient and maintainable tests starts here!
 
 ## Getting Started
 
@@ -167,11 +166,12 @@ public async Task SUT_can_be_customized()
 }
 ```
 
-With `SUTForge`, writing unit tests becomes a breeze. Embrace the Chicago approach of unit testing and elevate your TDD experience with `SUTForge`. Happy testing!
+With `SUTForge`, writing unit tests becomes a breeze. Embrace the Detroit approach of unit testing and elevate your TDD experience with `SUTForge`. Happy testing!
 
 ## References
 
 - [Unit Testing Principles, Practices, and Patterns](https://www.goodreads.com/en/book/show/48927138) (Vladimir Khorikov) 
 - [🚀 TDD, Where Did It All Go Wrong (Ian Cooper)](https://www.youtube.com/watch?v=EZ05e7EMOLM)
-- Uncle Bob (Robert C. Martin), TDD Harms Architecture https://blog.cleancoder.com/uncle-bob/2017/03/03/TDD-Harms-Architecture.html (On a shift from London to Chicago School of TDD; About fallacy of <class>Test file pattern)
+- [Uncle Bob (Robert C. Martin), TDD Harms Architecture](https://blog.cleancoder.com/uncle-bob/2017/03/03/TDD-Harms-Architecture.html) (On a shift from London to Detroit/Chicago/Classical School of TDD; About fallacy of <class>Test file pattern)
 - [TDD Revisited - Ian Cooper - NDC London 2021](https://www.youtube.com/watch?v=vOO3hulIcsY) (on testing “ports&adapters” architecture with Chicago School of TDD)
+- [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html#ClassicalAndMockistTesting)
