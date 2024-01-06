@@ -7,7 +7,7 @@
     <img src="favicon.png" alt="Icon" />
 </p>
 
-Simplifying .NET unit testing and Test-Driven Development with an intuitive builder pattern, classical approach, and high extensibility for effortless creation and customization of System Under Test instances.
+Simplifying ASP.NET Core unit testing and Test-Driven Development with an intuitive builder pattern, classical approach, and high extensibility for effortless creation and customization of System Under Test instances.
 
 ## Introduction
 
